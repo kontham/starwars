@@ -1,0 +1,6 @@
+<div class="col-xs-6 button-row">Characters:</div>
+<button class="btn-hover btn"
+        *ngFor="let character of characters"
+        (click)="onSelect(character)"> {{character.name}}
+</button>
+<app-movies [character]="selectedCharacter"></app-movies>

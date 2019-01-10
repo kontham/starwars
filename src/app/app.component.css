@@ -1,0 +1,25 @@
+.container{
+  background-image: url("../assets/img/background.png");
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.img{
+  opacity: 0.5;
+}
+.neon {
+  color: #D0F8FF;
+  text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+  0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+  0 0 40px #A5F1FF;
+}
+.header{
+  padding: 60px;
+  text-align: left;
+  color: white;
+  font-size: 40px;
+}
