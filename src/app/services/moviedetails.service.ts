@@ -12,8 +12,4 @@ export class MoviedetailsService {
   getMovieDetails(url: string): Observable<IMovieDetails> {
     return this.http.get<IMovieDetails>(url);
   }
-
-  getMovies(url: string): Observable<IMovieDetails> {
-    return this.http.get<IMovieDetails>(url);
-  }
 }

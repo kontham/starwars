@@ -10,14 +10,12 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {AppComponent} from './app.component';
 import {CharactersComponent} from './characters/characters.component';
 import {MoviesComponent} from './movies/movies.component';
-import {MoviedetailsComponent} from './moviedetails/moviedetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    MoviesComponent,
-    MoviedetailsComponent
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
