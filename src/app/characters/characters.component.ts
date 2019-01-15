@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import {ICharacter} from '../interfaces/ICharacter';
 import {CharacterService} from '../services/character.service';
 
@@ -18,6 +18,7 @@ export class CharactersComponent implements OnInit {
 
   constructor(private characterService: CharacterService) {
   }
+
 
   ngOnInit() {
     this.getCharacters();

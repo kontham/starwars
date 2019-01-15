@@ -1,10 +1,7 @@
 <div class="card">
   <div class="row" *ngIf="character">
-    <mat-panel-title (click)="(character)">{{character.name}}'s details:</mat-panel-title>
-    <div> Height: {{selectedCharacterDetails.height}}</div>
-    <div> Color: {{selectedCharacterDetails.skin_color}}</div>
-
-    <div> Movies he starred in:
+    <div (click)="(character)">{{character.name}}'s Movies:</div>
+    <div>
       <div *ngFor="let movie of MovieDetailsArray">
         {{movie.title}} - {{movie.release_date | date}}
       </div>
