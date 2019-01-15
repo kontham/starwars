@@ -3,6 +3,7 @@ import {ICharacter} from '../interfaces/ICharacter';
 import {ICharacterDetails} from '../interfaces/ICharacterDetails';
 import {MovieService} from '../services/movie.service';
 import {MoviedetailsService} from '../services/moviedetails.service';
+import {IMovieDetails} from '../interfaces/IMovieDetails';
 
 @Component({
   selector: 'app-movies',
@@ -21,25 +22,27 @@ export class MoviesComponent implements OnChanges {
   }
 
   ngOnChanges() {
-  this.getCharacterDetails(this.character.url);
+    this.getCharacterDetails(this.character.url);
   }
-
 
 
   getCharacterDetails(url): void {
     this.movieService.getCharacterDetails(url)
       .subscribe(
-        (resultCharacterDetails: ICharacterDetails) => {this.selectedCharacterDetails = resultCharacterDetails
-          this.getFilmDetails(this.selectedCharacterDetails);
+        (resultCharacterDetails: ICharacterDetails) => {
+          this.selectedCharacterDetails = resultCharacterDetails;
+          this.getMovieDetails(this.selectedCharacterDetails);
         });
   }
 
-  getFilmDetails(data: any) {
+  getMovieDetails(data: ICharacterDetails) {
     const filmDetails = data.films;
     this.MovieDetailsArray = [];
-    filmDetails.forEach((i) => { this.moviedetailsService.getMovieDetails(i)
-        .subscribe((data: any) => this.MovieDetailsArray.push(data));
+    filmDetails.forEach((i) => {
+      this.moviedetailsService.getMovieDetails(i)
+        .subscribe((data: IMovieDetails) => this.MovieDetailsArray.push(data));
     });
-  }}
+  }
+}
 
 

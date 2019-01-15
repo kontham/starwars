@@ -6,6 +6,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import {AppComponent} from './app.component';
 import {CharactersComponent} from './characters/characters.component';
@@ -24,7 +25,8 @@ import {MoviesComponent} from './movies/movies.component';
     MatMenuModule,
     MatToolbarModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

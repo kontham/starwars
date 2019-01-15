@@ -9,7 +9,7 @@ import {CharacterService} from '../services/character.service';
 })
 export class CharactersComponent implements OnInit {
 
-  characters: ICharacter;
+  characters: ICharacter[];
   selectedCharacter: ICharacter;
 
   onSelect(character: ICharacter) {
@@ -26,7 +26,7 @@ export class CharactersComponent implements OnInit {
   getCharacters() {
     this.characterService.getCharacters()
       .subscribe(
-        (resultCharacters: ICharacter) => this.characters = resultCharacters
+        (resultCharacters: ICharacter[]) => this.characters = resultCharacters
       );
   }
 }
