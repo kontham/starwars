@@ -4,4 +4,4 @@
         (click)="onSelect(character)"> {{character.name}}
 </button>
 
-<app-movies [character]="selectedCharacter"></app-movies>
+<app-movies *ngIf="selectedCharacter" [character]="selectedCharacter"></app-movies>

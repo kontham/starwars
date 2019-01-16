@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
 import {ICharacter} from '../interfaces/ICharacter';
 import {ICharacterDetails} from '../interfaces/ICharacterDetails';
 import {MovieService} from '../services/movie.service';
